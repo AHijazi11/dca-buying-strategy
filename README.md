@@ -1,19 +1,32 @@
-# 🎈 Blank app template
+# DCA "Buy-the-Dip" Strategy Simulator
 
-A simple Streamlit app template for you to modify!
+This Streamlit app demonstrates a **Dollar-Cost Averaging (DCA) approach** for buying a stock (or ETF) in **incremental “dip” intervals**. It lets you specify:
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+1. Your **total investment budget**  
+2. The **starting stock price** (and a lowest potential dip price)  
+3. **Interval spacing** (either fixed-dollar or fixed-percentage steps)  
+4. How closely your **average cost** should stay to each newly-lowered price  
 
-### How to run it on your own machine
+Based on these settings, the app calculates:
+- How many shares you can initially buy, and
+- How many additional shares to buy at each dip level,  
+while respecting your total budget and your average-cost constraints.
 
-1. Install the requirements
+---
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+## How to Use
 
-2. Run the app
+1. **Try the live demo**:  
+   [https://dcastrat.streamlit.app/](https://dcastrat.streamlit.app/)
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+2. **Run Locally**:
+
+   1. **Install Requirements**:
+      ```bash
+      pip install -r requirements.txt
+      ```
+
+   2. **Run the App**:
+      ```bash
+      streamlit run streamlit_app.py
+      ```
